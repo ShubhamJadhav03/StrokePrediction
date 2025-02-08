@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stroke Prediction</title>
+    <!-- Use url_for to generate the URL for the stylesheet -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Stroke Prediction</h1>
+        <form id="predictionForm">
+            <label for="gender">Gender (0: Female, 1: Male):</label>
+            <input type="number" id="gender" name="gender" required><br><br>
+
+            <label for="age">Age:</label>
+            <input type="number" id="age" name="age" required><br><br>
+
+            <label for="hypertension">Hypertension (0: No, 1: Yes):</label>
+            <input type="number" id="hypertension" name="hypertension" required><br><br>
+
+            <label for="heart_disease">Heart Disease (0: No, 1: Yes):</label>
+            <input type="number" id="heart_disease" name="heart_disease" required><br><br>
+
+            <label for="ever_married">Ever Married (0: No, 1: Yes):</label>
+            <input type="number" id="ever_married" name="ever_married" required><br><br>
+
+            <label for="work_type">Work Type (0: Private, 1: Self-employed, 2: Govt_job, 3: children, 4: Never_worked):</label>
+            <input type="number" id="work_type" name="work_type" required><br><br>
+
+            <label for="Residence_type">Residence Type (0: Urban, 1: Rural):</label>
+            <input type="number" id="Residence_type" name="Residence_type" required><br><br>
+
+            <label for="avg_glucose_level">Average Glucose Level:</label>
+            <input type="number" id="avg_glucose_level" name="avg_glucose_level" step="0.01" required><br><br>
+
+            <label for="bmi">BMI:</label>
+            <input type="number" id="bmi" name="bmi" step="0.01" required><br><br>
+
+            <label for="smoking_status">Smoking Status (0: Unknown, 1: Never smoked, 2: Formerly smoked, 3: Smokes):</label>
+            <input type="number" id="smoking_status" name="smoking_status" required><br><br>
+
+            <button type="submit">Predict</button>
+        </form>
+
+        <div id="result"></div>
+    </div>
+
+    <!-- Use url_for to generate the URL for the script -->
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
